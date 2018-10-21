@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <style>
+        *{
+            margin: 1%;
+            padding: 1%;
+            background-color: blanchedalmond;
+        }
+        h2{
+            font-size: 50px;
+            text-align: center;
+            background-color: white;
+            border: 5px solid black;
+        }
+        .name{
+            width: 75%;
+            margin-left: 5%;
+            margin-right: 150px;
+            border: 1px grey solid;
+            background-color: azure;
+        }
+        .button{
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+            border: 1px grey solid;
+            font-size: 20px;
+            display: inline-block;
+        }
+        .button2{
+            background-color: rgb(6, 153, 6);
+            border-radius: 5px;
+            color: white;
+            border: 1px grey solid;
+            font-size: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action='/process' method='post'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color:red">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        Email: <input class="name" type='text' name='email'/>
+        First name: <input class="name" type='text' name='first_name'/>
+        Last name: <input class="name" type='text' name='last_name'/>
+        Password: <input class="name" type='password' name='password'/>
+        Confirm Password: <input class="name" type='password' name='password_confirm'/>
+
+        <input class="button" type='submit' value='Register'><a class="button2" href="/reg">Log In</a>
+    </form>
+    
+</body>
+</html>

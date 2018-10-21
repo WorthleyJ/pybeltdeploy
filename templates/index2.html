@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <style>
+
+        *{
+            margin: 1%;
+            padding: 1%;
+            background-color: blanchedalmond;
+        }
+        .aaa{
+            background-color: rgba(240, 255, 255, 0.502);
+        }
+        .info{
+            background-color: azure;
+        }
+        h2{
+            font-size: 50px;
+            text-align: center;
+            background-color: white;
+            border: 5px solid black;
+        }
+        .button{
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 25px; 
+            width: 98%;
+            background-color: blue;
+            margin: 3px;
+            display: block;
+            text-align: center;
+            color: azure;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submitted Info</h2>
+    <div class="aaa">
+        <div class= 'info'>
+            Email:{{session['email']}}
+        </div>
+        <div class= 'info'>
+            First Name:{{session['first_name']}}
+        </div>
+        <div class= 'info'>
+            Last name:{{session['last_name']}}
+        </div>
+        <div class= 'info'>
+            Password:{{session['password']}}
+        </div>
+        <div class= 'info'>
+            Password:{{session['password_confirm']}}
+        </div>
+    </div>
+    
+    <a class="button" href="/main">main page</a>
+</body>
+</html>

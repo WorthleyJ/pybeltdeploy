@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>log or reg</title>
+    <!-- linking a css style sheet -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style_sheet.css') }}"> -->
+    <!-- linking a javascript file -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script> -->
+    <!-- linking an image -->
+    <!-- <img src="{{ url_for('static', filename='dojo.jpg') }}">
+    <img src="{{ url_for('static', filename='dojo2.jpg') }}"> -->
+
+    <style>
+        *{
+            background-color: blanchedalmond;
+        }
+        h1{
+            font-size: 35px;
+            text-align: center;
+            background-color: white;
+            border: 5px solid black;
+        }
+        .buttons{
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 25px; 
+            width: 98%;
+            background-color: blue;
+            margin: 3px;
+            display: block;
+            text-align: center;
+            color: azure;
+            text-decoration: none;
+        }
+        .img1{
+            width: 24px;
+            vertical-align: center;
+            transform: rotate(180deg);
+            background-color: white;
+            margin-left: 5px;
+        }
+        .img2{
+            width: 96%;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <H1>Coding Club<img class="img1" src="{{ url_for('static', filename='dojo.jpg') }}"></H1>
+    <img class="img2" src="{{ url_for('static', filename='dojo2.jpg') }}">
+    <div>
+        <a class="buttons" href="log">Log in</a>
+        <a class="buttons" href="reg">Register</a>
+    </div>
+</body>
+</html>
